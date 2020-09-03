@@ -1,2 +1,2 @@
 # Hangman-Game
-Hangman game playable from command-line interface.
+Hangman game on python, playable from command-line interface.
