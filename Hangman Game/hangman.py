@@ -11,11 +11,12 @@ def play(word):
     guessed_letters = []
     guessed_words = []
     tries = 6
-    print("Let's Play Hangman")
+    print("************************| Let's Play Hangman |************************")
     print(display_hangman(tries))
-    print(word_completion,"\n")
+    print("WORD : ",word_completion,"\n")
     while not guessed and tries>0:
         guess = input("Guess a letter or a word: ").upper()
+        print('\n')
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
                 print(f"You have guessed the letter '{guess}'")
@@ -48,12 +49,11 @@ def play(word):
         else:
             print("Invalid Guess")
         print(display_hangman(tries))
-        print(word_completion,"\n")
-    
+        print("WORD : ",word_completion,"\n")
     if guessed:
         print("Woohoo!!! You have guessed the word correctly!")
     else:
-        print(f"Oops!!!, You ran out of tries. The word was {word}. Better Luck next time")
+        print(f"Oops!!!, You ran out of tries. The word was '{word}'. Better Luck next time")
 
 def display_hangman(tries):
     stages = [  # final state: head, torso, both arms, and both legs
